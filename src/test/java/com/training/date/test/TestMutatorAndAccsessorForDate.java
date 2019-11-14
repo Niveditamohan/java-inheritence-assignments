@@ -1,4 +1,4 @@
-package com.training.gettersetter.test;
+package com.training.date.test;
 
 import static org.junit.Assert.assertEquals;
 
@@ -9,10 +9,11 @@ import java.util.Date;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import com.training.gettersetter.FormatDate;
-import com.training.gettersetter.exception.InvalidDaysException;
-import com.training.gettersetter.exception.InvalidMonthException;
-import com.training.gettersetter.exception.InvalidYearException;
+
+import com.training.date.FormatDate;
+import com.training.date.exception.InvalidDaysException;
+import com.training.date.exception.InvalidMonthException;
+import com.training.date.exception.InvalidYearException;
 
 public class TestMutatorAndAccsessorForDate {
 

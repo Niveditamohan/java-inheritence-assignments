@@ -1,12 +1,12 @@
-package com.training.gettersetter;
+package com.training.date;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import com.training.gettersetter.exception.InvalidDaysException;
-import com.training.gettersetter.exception.InvalidMonthException;
-import com.training.gettersetter.exception.InvalidYearException;
+import com.training.date.exception.InvalidDaysException;
+import com.training.date.exception.InvalidMonthException;
+import com.training.date.exception.InvalidYearException;
 
 public class FormatDate {
 

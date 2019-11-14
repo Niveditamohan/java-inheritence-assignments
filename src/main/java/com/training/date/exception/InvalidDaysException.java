@@ -1,4 +1,4 @@
-package com.training.gettersetter.exception;
+package com.training.date.exception;
 
 public class InvalidDaysException extends Exception {
 
@@ -8,7 +8,7 @@ public class InvalidDaysException extends Exception {
 	public InvalidDaysException() {
 	}
 	
-	/**Default constructor
+	/**Parameterized constructor
 	 * Passes message to super class Exception
 	 * @param message
 	 */
