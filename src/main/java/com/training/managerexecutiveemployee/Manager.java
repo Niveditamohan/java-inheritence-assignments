@@ -34,16 +34,22 @@ public class Manager extends Employee {
 	@Override
 	public String toString() {
 		return super.toString() + ", Employee Net Salary - " + calculateNetSalary() + ", Employee Gross Salary - "
-				+ calculateGrossSalary() + ", PetrolAllowance - " + petrolAllowance + ", FoodAllowance - " + foodAllowance
-				+ ", OtherAllowances - " + otherAllowances;
+				+ calculateGrossSalary() + ", PetrolAllowance - " + petrolAllowance + ", FoodAllowance - "
+				+ foodAllowance + ", OtherAllowances - " + otherAllowances;
 	}
 
+	/**
+	 * Overridden method to implement calculateGrossSalary() Employee class
+	 */
 	@Override
 	public double calculateGrossSalary() {
 		employeeGrossSalary = 1.5 * super.getEmployeeBasicSalary();
 		return employeeGrossSalary;
 	}
 
+	/**
+	 * Overridden method to implement calculateNetSalary() Employee class
+	 */
 	@Override
 	public double calculateNetSalary() {
 		calculateGrossSalary();

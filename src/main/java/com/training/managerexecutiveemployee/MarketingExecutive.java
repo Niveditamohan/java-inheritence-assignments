@@ -38,12 +38,18 @@ public class MarketingExecutive extends Employee {
 				+ tourAllowance + ", Telephone Allowance - " + telephoneAllowance;
 	}
 
+	/**
+	 * Overridden method to implement calculateGrossSalary() Employee class
+	 */
 	@Override
 	public double calculateGrossSalary() {
 		this.employeeGrossSalary = 1.5 * super.getEmployeeBasicSalary();
 		return employeeGrossSalary;
 	}
 
+	/**
+	 * Overridden method to implement calculateNetSalary() Employee class
+	 */
 	@Override
 	public double calculateNetSalary() {
 		calculateGrossSalary();
