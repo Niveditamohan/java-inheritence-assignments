@@ -8,6 +8,7 @@ public abstract class Employee {
 	private String employeeName;
 	private int employeeId;
 	private double employeeBasicSalary;
+	private double medical;
 	
 	/**
 	 * No Argument constructor
@@ -18,15 +19,15 @@ public abstract class Employee {
 	/**
 	 * Parameterized constructor
 	 */
-	public Employee(String employeeName, int employeeId, double employeeBasicSalary) {
+	public Employee(String employeeName, int employeeId, double employeeBasicSalary, double medical) {
 		this.employeeName = employeeName;
 		this.employeeId = employeeId;
 		this.employeeBasicSalary = employeeBasicSalary;
+		this.medical = medical;
 	}
 
 	/**
 	 * Mutators and Accessors for the attributes of the Employee object
-	 * @return
 	 */
 	public String getEmployeeName() {
 		return employeeName;
@@ -52,6 +53,14 @@ public abstract class Employee {
 		this.employeeBasicSalary = employeeBasicSalary;
 	}
 
+	public double getMedical() {
+		return medical;
+	}
+
+	public void setMedical(double medical) {
+		this.medical = medical;
+	}
+
 	/**
 	 * toString() method that returns the details of an employee object
 	 */
@@ -60,4 +69,7 @@ public abstract class Employee {
 		return "Employee Name - " + employeeName + ", Employee ID - " + employeeId + ", Employee Basic Salary - "
 				+ employeeBasicSalary;
 	}
+	
+	public abstract double calculateGrossSalary();
+	public abstract double calculateNetSalary();
 }

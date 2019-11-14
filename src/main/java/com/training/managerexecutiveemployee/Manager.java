@@ -10,7 +10,8 @@ public class Manager extends Employee {
 	private double otherAllowances;
 	private double employeeGrossSalary;
 	private double employeeNetSalary;
-	
+	private static final int pt = 200;
+
 	/**
 	 * No argument constructor
 	 */
@@ -20,13 +21,11 @@ public class Manager extends Employee {
 	/**
 	 * Parameterized constructor
 	 */
-	public Manager(String employeeName, int employeeId, double employeeBasicSalary) {
-		super(employeeName, employeeId, employeeBasicSalary);
-		this.petrolAllowance = 0.08*employeeBasicSalary;
-		this.foodAllowance = 0.13*employeeBasicSalary;
-		this.otherAllowances = 0.03*employeeBasicSalary;
-		this.employeeGrossSalary = 1.5*employeeBasicSalary;
-		this.employeeNetSalary = employeeGrossSalary - 0.12*employeeBasicSalary-200;
+	public Manager(String employeeName, int employeeId, double employeeBasicSalary, double medical) {
+		super(employeeName, employeeId, employeeBasicSalary, medical);
+		this.petrolAllowance = 0.08 * employeeBasicSalary;
+		this.foodAllowance = 0.13 * employeeBasicSalary;
+		this.otherAllowances = 0.03 * employeeBasicSalary;
 	}
 
 	/**
@@ -34,8 +33,22 @@ public class Manager extends Employee {
 	 */
 	@Override
 	public String toString() {
-		return super.toString() + ", Employee Net Salary - " + employeeNetSalary + ", Employee Gross Salary - " + 
-		employeeGrossSalary + ", PetrolAllowance - " + petrolAllowance + ", FoodAllowance - " + foodAllowance +
-		", OtherAllowances - " + otherAllowances;
+		return super.toString() + ", Employee Net Salary - " + calculateNetSalary() + ", Employee Gross Salary - "
+				+ calculateGrossSalary() + ", PetrolAllowance - " + petrolAllowance + ", FoodAllowance - " + foodAllowance
+				+ ", OtherAllowances - " + otherAllowances;
 	}
+
+	@Override
+	public double calculateGrossSalary() {
+		employeeGrossSalary = 1.5 * super.getEmployeeBasicSalary();
+		return employeeGrossSalary;
+	}
+
+	@Override
+	public double calculateNetSalary() {
+		calculateGrossSalary();
+		employeeNetSalary = employeeGrossSalary - 0.12 * super.getEmployeeBasicSalary() - pt;
+		return employeeNetSalary;
+	}
+
 }

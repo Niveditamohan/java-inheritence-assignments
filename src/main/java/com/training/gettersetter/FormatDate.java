@@ -1,5 +1,7 @@
 package com.training.gettersetter;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class FormatDate {
@@ -32,8 +34,9 @@ public class FormatDate {
 		this.year = year;
 	}
 
-	public Date returnDate() {
-		
-		return null;
+	public String returnDate() throws ParseException {
+		String dateString  = days + "-" + months + "-" + year;
+		Date date = new SimpleDateFormat("dd-MM-yyyy").parse(dateString);
+		return date.getDay()+ "-" + date.getMonth() + "-" + date.getYear();
 	}
 }
