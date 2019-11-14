@@ -43,7 +43,7 @@ public class MarketingExecutive extends Employee {
 	 */
 	@Override
 	public double calculateGrossSalary() {
-		this.employeeGrossSalary = 1.5 * super.getEmployeeBasicSalary();
+		this.employeeGrossSalary = 1.5 * super.getEmployeeBasicSalary() + telephoneAllowance + tourAllowance;
 		return employeeGrossSalary;
 	}
 
@@ -53,7 +53,8 @@ public class MarketingExecutive extends Employee {
 	@Override
 	public double calculateNetSalary() {
 		calculateGrossSalary();
-		this.employeeNetSalary = employeeGrossSalary - (0.12 * super.getEmployeeBasicSalary() + pt);
+		this.employeeNetSalary = employeeGrossSalary - (0.12 * super.getEmployeeBasicSalary() + pt)
+				- (telephoneAllowance + tourAllowance);
 		return employeeNetSalary;
 	}
 }

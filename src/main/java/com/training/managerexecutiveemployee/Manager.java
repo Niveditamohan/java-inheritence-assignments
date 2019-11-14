@@ -43,7 +43,7 @@ public class Manager extends Employee {
 	 */
 	@Override
 	public double calculateGrossSalary() {
-		employeeGrossSalary = 1.5 * super.getEmployeeBasicSalary();
+		employeeGrossSalary = 1.5 * super.getEmployeeBasicSalary() + foodAllowance + otherAllowances + petrolAllowance;
 		return employeeGrossSalary;
 	}
 
@@ -53,7 +53,8 @@ public class Manager extends Employee {
 	@Override
 	public double calculateNetSalary() {
 		calculateGrossSalary();
-		employeeNetSalary = employeeGrossSalary - 0.12 * super.getEmployeeBasicSalary() - pt;
+		employeeNetSalary = employeeGrossSalary - 0.12 * super.getEmployeeBasicSalary() - pt
+				- (foodAllowance + otherAllowances + petrolAllowance);
 		return employeeNetSalary;
 	}
 

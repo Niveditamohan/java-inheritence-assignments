@@ -30,7 +30,7 @@ public class TestManagerAndExecutive {
 	@Test
 	public void testshowDetailsManager() {
 		assertEquals("Employee Name - Nivedita, Employee ID - 101, Employee Basic Salary - 380000.0, "
-				+ "Employee Net Salary - 524200.0, Employee Gross Salary - 570000.0, PetrolAllowance - 30400.0, "
+				+ "Employee Net Salary - 524200.0, Employee Gross Salary - 661200.0, PetrolAllowance - 30400.0, "
 				+ "FoodAllowance - 49400.0, OtherAllowances - 11400.0", employee.toString());
 	}
 
@@ -40,7 +40,7 @@ public class TestManagerAndExecutive {
 	@Test
 	public void testshowDetailsMarketingExecutive() {
 		assertEquals("Employee Name - Riya, Employee ID - 102, Employee Basic Salary - 500000.0,"
-				+ " Employee Net Salary - 689800.0, Employee Gross Salary - 750000.0, KilometersTravelled - 5000,"
+				+ " Employee Net Salary - 689800.0, Employee Gross Salary - 776500.0, KilometersTravelled - 5000,"
 				+ " Tour Allowance - 25000.0, Telephone Allowance - 1500", employee1.toString());
 	}
 
@@ -49,7 +49,7 @@ public class TestManagerAndExecutive {
 	 */
 	@Test
 	public void testcalculateGrossSalaryManager() {
-		assertEquals(570000, employee.calculateGrossSalary(), 0.03);
+		assertEquals(661200, employee.calculateGrossSalary(), 0.03);
 	}
 
 	/**
@@ -65,7 +65,7 @@ public class TestManagerAndExecutive {
 	 */
 	@Test
 	public void testcalculateGrossSalaryMarketingExecutive() {
-		assertEquals(750000, employee1.calculateGrossSalary(), 0.03);
+		assertEquals(776500, employee1.calculateGrossSalary(), 0.03);
 	}
 
 	/**
