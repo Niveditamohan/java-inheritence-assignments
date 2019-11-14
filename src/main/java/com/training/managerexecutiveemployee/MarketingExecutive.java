@@ -43,7 +43,7 @@ public class MarketingExecutive extends Employee {
 	 */
 	@Override
 	public double calculateGrossSalary() {
-		this.employeeGrossSalary = 1.5 * super.getEmployeeBasicSalary() + telephoneAllowance + tourAllowance;
+		this.employeeGrossSalary = 1.5 * super.getEmployeeBasicSalary() + telephoneAllowance + tourAllowance + super.getMedical();
 		return employeeGrossSalary;
 	}
 
